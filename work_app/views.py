@@ -7,7 +7,7 @@ from django.shortcuts import render, redirect
 from django.views.decorators.csrf import csrf_exempt
 
 from work_app.forms import Userregister
-from work_app.models import Login
+from work_app.models import Login, Workrequest
 
 
 def home(request):
@@ -44,3 +44,12 @@ def view_workshop(request):
 def view_customer(request):
     work = Login.objects.filter(is_user=True)
     return render(request, 'vieww.html', {'work': work})
+
+
+def requests(request):
+    data = Workrequest.objects.filter(status = 1)
+    return render(request,'request.html',{'data':data})
+
+def remaining_requests(request):
+    data = Workrequest.objects.filter(status=0)
+    return render(request,'total.html',{'data':data})

@@ -9,6 +9,8 @@ urlpatterns = [
     path('adminhome', views.adhome, name='adminhome'),
     path('view_workshop', views.view_workshop, name='view_workshop'),
     path("view_customer",views.view_customer,name="view_customer"),
+    path("requests",views.requests,name="requests"),
+    path("total_requests",views.remaining_requests,name="total_requests"),
 
 
 

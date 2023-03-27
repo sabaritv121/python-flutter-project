@@ -1,5 +1,6 @@
-{% load static %}
+
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 
 
@@ -53,7 +54,7 @@
             <div class="collapse" id="ui-basic">
               <ul class="nav flex-column sub-menu">
                 <li class="nav-item">
-                  <a class="nav-link" href="{% url 'view_workshop' %}">View</a>
+                  <a class="nav-link" href="{% url 'view_customer' %}">View</a>
                 </li>
 <!--                <li class="nav-item">-->
 <!--                  <a class="nav-link" href="fuelapprove">Approve</a>-->
@@ -77,7 +78,7 @@
 <!--                  <a class="nav-link" href="">View</a>-->
 <!--                </li>-->
                 <li class="nav-item">
-                  <a class="nav-link" href="{% url 'view_customer' %}">view</a>
+                  <a class="nav-link" href="{% url 'view_workshop' %}">view</a>
                 </li>
 <!--                <li class="nav-item">-->
 <!--                  <a class="nav-link" href="pages/ui-features/typography.html">Typography</a>-->
@@ -87,18 +88,18 @@
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="subfuel">
-<!--              <i class="mdi mdi-contacts menu-icon"></i>-->
-<!--              <span class="menu-title">View fuel delivery</span>-->
+            <a class="nav-link" href="{% url 'requests' %}">
+              <i class="mdi mdi-contacts menu-icon"></i>
+        <span class="menu-title">Requests accepted</span>
             </a>
           </li>
 
-<!--          <li class="nav-item">-->
-<!--            <a class="nav-link" href="pages/forms/basic_elements.html">-->
-<!--              <i class="mdi mdi-format-list-bulleted menu-icon"></i>-->
-<!--              <span class="menu-title">Forms</span>-->
-<!--            </a>-->
-<!--          </li>-->
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'total_requests' %}">
+              <i class="mdi mdi-format-list-bulleted menu-icon"></i>
+              <span class="menu-title">Total requests</span>
+            </a>
+          </li>
 <!--          <li class="nav-item">-->
 <!--            <a class="nav-link" href="pages/charts/chartjs.html">-->
 <!--              <i class="mdi mdi-chart-bar menu-icon"></i>-->

@@ -5,7 +5,7 @@
             <div class="page-header flex-wrap">
               <div class="card">
                 <div class="card-body">
-<!--                    <h4 class="card-title">Basic Table</h4>-->
+                    <h4 class="card-title">REQUESTS</h4>
 <!--                    <p class="card-description"> Add class <code>.table</code>-->
 <!--                    </p>-->
                     <div class="table-responsive">
@@ -14,28 +14,31 @@
                           <tr>
                             <th>SL No</th>
                             <th>Customer Name</th>
-<!--                            <th>Owner Name</th>-->
+                            <th>workshop</th>
 
-                            <th>Address</th>
-<!--                            <th>District</th>-->
-<!--                            <th>State</th>-->
-                            <th>Phone Number</th>
-<!--                            <th>Status</th>-->
-<!--                             <th>Delete</th>-->
+                            <th>vehicle_model</th>
+                            <th>problem</th>
+
+
+                            <th>date</th>
+                             <th>time</th>
+                                <th>phone_number</th>
                           </tr>
                         </thead>
                         <tbody>
-                        {% for i in work %}
+                        {% for i in data %}
                           <tr>
 
                             <td>{{forloop.counter}}</td>
-                            <td>{{i.user_name}}</td>
+                       <td>{{i.customer}}</td>
+                            <td>{{i.workshop}}</td>
+                            <td>{{i.vehicle_model}}</td>
+                               <td>{{i.problem}}</td>
 
-<!--                            <td>{{i.min_wage}}</td>-->
-                            <td>{{i.address}}</td>
-<!--                            <td>{{i.district}}</td>-->
-                            <td>{{i.phone_number}}</td>
-<!--                            <td>{{i.state}}</td>-->
+
+                               <td>{{i.date}}</td>
+                            <td>{{i.time}}</td>
+                              <td>{{i.phone_number}}</td>
 
 
                           </tr>
